@@ -156,14 +156,13 @@ h1 {
 
 /* Hero section */
 header {
-  position: relative;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
 }
 header nav {
-  z-index: 500;
   position: relative;
+  z-index: 500;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -174,7 +173,25 @@ header nav p {
 }
 header nav ul {
   position: absolute;
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  opacity: 0;
+  width: calc(100% + 20px);
+  top: -10px;
+  left: calc(100% + 10px);
+  height: 90vh;
+  border-radius: 20px;
+  background-color: hsla(0deg, 0%, 100%, 0.1);
+  backdrop-filter: blur(2rem);
+  transition: 0.4s all ease;
+}
+header nav ul.active {
+  opacity: 1;
+  transform: translateX(-100%);
+  transition: 0.4s all ease;
 }
 @media (min-width: 720px) {
   header nav {
