@@ -1,0 +1,20 @@
+.container{
+    padding-top: 50px;
+    padding-bottom: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.page{
+    min-height: 100vh;
+}
+
+.separator{
+    border-bottom: $border-10 solid $secondary;
+}
+h1{
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
