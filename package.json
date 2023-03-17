@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-challenge-ui",
+  "version": "1.0.0",
+  "description": "A portfolio frontend integration based on an oline figme design, for train and practice purposes",
+  "main": "src/imdex.js",
+  "scripts": {
+    "test": "dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Djoufson/Portfolio-Challenge-UI"
+  },
+  "keywords": [
+    "Portfolio",
+    "HTML",
+    "CSS",
+    "SCSS",
+    "JS",
+    "JavaScript"
+  ],
+  "author": "Djoufson",
+  "license": "ISC"
+}

@@ -1,0 +1,6 @@
+- primary: #091A29
+- secondary: #183A58
+- secondary-accentuation: #183A58 50%
+- white: #FFFFFF
+- white-accentuation: #FFFFFF overlay (`CSS` mix-blend-mode: overlay;)
+- red: #F6683C
