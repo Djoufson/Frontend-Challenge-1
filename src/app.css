@@ -84,6 +84,7 @@ video {
   font-size: 100%;
   color: #FFFFFF;
   font: inherit;
+  font-family: sans-serif;
   vertical-align: baseline;
   text-decoration: none;
 }
@@ -108,7 +109,7 @@ section {
 }
 
 body {
-  line-height: 1.2;
+  line-height: 1.8;
 }
 
 ol,
@@ -132,19 +133,32 @@ code {
 }
 
 /* Global style */
+* {
+  scroll-behavior: smooth;
+}
+
 .container {
-  padding-top: 50px;
-  padding-bottom: 0;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1024px;
+  margin: auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.container.separated {
+  border-bottom: 2px solid #183A58;
+}
+@media (min-width: 720px) {
+  .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 
 .page {
   min-height: 100vh;
-}
-
-.separator {
-  border-bottom: 3px solid #183A58;
 }
 
 h1 {
@@ -154,9 +168,50 @@ h1 {
   font-weight: 500;
 }
 
+h2 {
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 14px;
+}
+
+hr {
+  width: 100%;
+  height: 2px;
+  background-color: #183A58;
+  border: none;
+}
+
+.red-title {
+  color: #F6683C;
+  font-size: 12px;
+}
+
+#back-to-top {
+  position: fixed;
+  opacity: 0;
+  z-index: -5;
+  transform: translateY(20px);
+  width: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  padding: 15px;
+  bottom: 60px;
+  right: min(60px, 10%);
+  transition: 0.4s all ease;
+}
+#back-to-top.active {
+  opacity: 1;
+  z-index: 10;
+  transform: translateY(0);
+  transition: 0.4s all ease;
+}
+
 /* Hero section */
 header {
-  height: 100vh;
+  position: relative;
   width: 100vw;
   overflow: hidden;
 }
@@ -194,12 +249,35 @@ header nav ul.active {
   transition: 0.4s all ease;
 }
 @media (min-width: 720px) {
-  header nav {
-    justify-content: start;
+  header nav p {
+    display: none;
+  }
+  header nav ul {
+    opacity: 1;
+    background-color: transparent;
+    position: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    width: auto;
+    top: auto;
+    left: auto;
+    height: auto;
+  }
+  header nav ul li a {
+    color: #183A58;
+  }
+  header nav ul li a:hover {
+    color: rgba(24, 58, 88, 0.5019607843);
+  }
+  header nav ul li a.active {
+    color: white;
   }
 }
 
 #hero {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -209,6 +287,17 @@ header nav ul.active {
   top: 0;
   height: 100vh;
   right: -125%;
+}
+@media (min-width: 720px) {
+  #hero {
+    min-height: auto;
+  }
+  #hero > img {
+    top: 0;
+    height: auto;
+    width: min(60%, 650px);
+    right: 0;
+  }
 }
 
 .profile-introduction .profile-picture {
@@ -233,6 +322,25 @@ header nav ul.active {
   top: 0;
   left: 20%;
 }
+@media (min-width: 720px) {
+  .profile-introduction .profile-picture {
+    height: 35vh;
+  }
+  .profile-introduction .profile-picture img {
+    width: 6rem;
+    border: 3px solid #F6683C;
+  }
+  .profile-introduction .profile-picture::after {
+    position: absolute;
+    content: "HI";
+    font-size: 400px;
+    color: white;
+    mix-blend-mode: overlay;
+    font-weight: 600;
+    top: -210px;
+    left: -25px;
+  }
+}
 .profile-introduction span {
   position: relative;
 }
@@ -251,7 +359,7 @@ header nav ul.active {
   align-items: flex-end;
 }
 .skills p {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   color: #183A58;
   width: 80px;
@@ -261,14 +369,14 @@ header nav ul.active {
 
 .hamburger {
   cursor: pointer;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
-  padding: 0;
+  background-color: rgba(24, 58, 88, 0.5019607843);
   border: none;
+  border-radius: 50%;
 }
 
 .hamburger span {
@@ -307,5 +415,117 @@ header nav ul.active {
 @media (min-width: 720px) {
   .hamburger span {
     display: none;
+  }
+}
+
+@media (min-width: 720px) {
+  #about-me .container {
+    background-image: url(../../../Assets/Images/Crystal\ two.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 200px auto;
+  }
+  #about-me .content {
+    max-width: 80%;
+  }
+}
+#about-me p {
+  margin-bottom: 28px;
+}
+
+#design-stack .stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+@media (min-width: 720px) {
+  #design-stack .stack {
+    justify-content: space-evenly;
+  }
+}
+#design-stack .group {
+  width: 250px;
+  display: flex;
+  gap: 10px;
+}
+#design-stack .group .image {
+  width: 60%;
+}
+#design-stack .group .image p {
+  text-align: center;
+}
+#design-stack .group .image img {
+  width: 100%;
+}
+#design-stack .group ul {
+  transform: translateY(15px);
+}
+#design-stack .group ul li {
+  font-size: 15px;
+}
+
+#projects .container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+#projects .illustration {
+  padding: 30px;
+  background-color: rgba(24, 58, 88, 0.5019607843);
+  border-radius: 18px;
+}
+#projects .illustration .content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+#projects .illustration .content img {
+  width: 145px;
+  background-color: #183A58;
+  border-radius: 18px;
+}
+
+/* Footer */
+#contact-me {
+  background-color: rgba(24, 58, 88, 0.5019607843);
+  padding-bottom: 50px;
+}
+#contact-me .container h1 {
+  margin: 0;
+}
+#contact-me .links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+#contact-me .links .qr-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+#contact-me .links .qr-code img {
+  border-radius: 10px;
+}
+@media (min-width: 720px) {
+  #contact-me {
+    background-image: url(../../../Assets/Images/link\ 1.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 170px auto;
+  }
+  #contact-me .container {
+    display: flex;
+    gap: 50px;
+  }
+  #contact-me .container .description {
+    width: 40%;
+  }
+  #contact-me .container .links {
+    flex-direction: row;
   }
 }

@@ -1,0 +1,25 @@
+#projects{
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    .illustration{
+        padding: 30px;
+        background-color: $secondary-accentuation;
+        border-radius: 18px;
+        .content{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+
+            img{
+                width: 145px;
+                background-color: $secondary;
+                border-radius: 18px;
+            }
+        }
+    }
+}

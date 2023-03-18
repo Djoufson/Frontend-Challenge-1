@@ -10,15 +10,16 @@
 </head>
 
 <body>
-    <header class="page separator">
-        <div class="container">
+    <button id="back-to-top">TOP</button>
+    <header>
+        <div class="container separated">
             <nav>
                 <p>Portfolio</p>
                 <ul id="nav-links">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#" class="active">Home</a></li>
                     <li><a href="#about-me">About me</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#projects">Products</a></li>
+                    <li><a href="#contact-me">Contact</a></li>
                 </ul>
                 <button class="hamburger" onclick="toggleNavbar()">
                     <span id="span-burger"></span>
@@ -48,30 +49,32 @@
     </header>
     <main>
         <section id="about-me">
-            <div class="container">
-                <h1>About Me</h1>
-                <p>
-                    Hi there! My name is Shallom, and I am a highly creative and driven product designer with a passionfor designing innovative and user-friendly products. With over 5 years of experience in the industry, I have developed a unique skill set that allow me to turn complex concepts into intuitive and beautiful designs that people love to use.
-                </p>
-                <p>
-                    I have a strong backround in Graphics design, annd I always stay up to date with the latest design trends and technology. My design philosophy is centered around empathy and understanding the needs of the end-user, and take a user centered approach to all my projects to ensure that every design solves a real-world problems and meets the need of the target audience.
-                </p>
-                <p>
-                    Throughout my career, I have worked with a deverse range of clients, from startups to Tech companies, and I have consistently delivered high-quality designs that have exceeded their expectations. I have a knack for communicationg complex ideas to skateholders, and I am skilled at managing the design process from start to finish, including conducting user research, prototyping and testing.
-                </p>
-                <p>
-                    When I'm not designing, you can find me exploring the latest design tools and techniques, or volunteering at local desing events. I am always eager to learn and grow as a designer, and I am commited to staying at the forefront of industry. If you're looking for a talented and designer to bring your ideas to life, I would love the opportunit to work with you. Let's create something great together!
-                </p>
+            <div class="container separated">
+                <div class="content">
+                    <h1>About Me</h1>
+                    <p>
+                        Hi there! My name is Shallom, and I am a highly creative and driven product designer with a passionfor designing innovative and user-friendly products. With over 5 years of experience in the industry, I have developed a unique skill set that allow me to turn complex concepts into intuitive and beautiful designs that people love to use.
+                    </p>
+                    <p>
+                        I have a strong backround in Graphics design, annd I always stay up to date with the latest design trends and technology. My design philosophy is centered around empathy and understanding the needs of the end-user, and take a user centered approach to all my projects to ensure that every design solves a real-world problems and meets the need of the target audience.
+                    </p>
+                    <p>
+                        Throughout my career, I have worked with a deverse range of clients, from startups to Tech companies, and I have consistently delivered high-quality designs that have exceeded their expectations. I have a knack for communicationg complex ideas to skateholders, and I am skilled at managing the design process from start to finish, including conducting user research, prototyping and testing.
+                    </p>
+                    <p>
+                        When I'm not designing, you can find me exploring the latest design tools and techniques, or volunteering at local desing events. I am always eager to learn and grow as a designer, and I am commited to staying at the forefront of industry. If you're looking for a talented and designer to bring your ideas to life, I would love the opportunit to work with you. Let's create something great together!
+                    </p>
+                </div>
             </div>
         </section>
         <section id="design-stack">
-            <div class="container">
+            <div class="container separated">
                 <h1>Design stack</h1>
                 <div class="stack">
                     <div class="group">
                         <div class="image">
                             <img src="../Assets/Images/Group 2.png" alt="">
-                            <p>Images and videos</p>
+                            <p class="red-title">Images and videos</p>
                         </div>
                         <ul>
                             <li>Photoshop</li>
@@ -83,7 +86,7 @@
                     <div class="group">
                         <div class="image">
                             <img src="../Assets/Images/Group 3.png" alt="">
-                            <p>Ui/Ux Design</p>
+                            <p class="red-title">Ui/Ux Design</p>
                         </div>
                         <ul>
                             <li>Figma</li>
@@ -93,7 +96,7 @@
                     <div class="group">
                         <div class="image">
                             <img src="../Assets/Images/Group 4.png" alt="">
-                            <p>3D</p>
+                            <p class="red-title">3D</p>
                         </div>
                         <ul>
                             <li>Spline</li>
@@ -104,27 +107,30 @@
             </div>
         </section>
         <section id="projects">
-            <div class="product-design"></div>
-            <div class="illustration">
-                <h2>Illustration</h2>
-                <div class="content">
-                    <img src="../Assets/Images/Layer_1.png" alt="" srcset="">
-                    <img src="../Assets/Images/Isolation_Mode.png" alt="" srcset="">
-                    <img src="../Assets/Images/Layer_2.png" alt="" srcset="">
-                    <img src="../Assets/Images/real cat pixel 2 1.png" alt="" srcset="">
-                    <img src="../Assets/Images/Payment--5ec7b84501d0360016d49083 1.png" alt="" srcset="">
-                    <img src="../Assets//Images/Shield 1.png" alt="" srcset="">
+            <div class="container">
+                <h1>Projects</h1>
+                <div class="product-design"></div>
+                <div class="illustration">
+                    <h2 class="red-title">Illustration</h2>
+                    <div class="content">
+                        <img src="../Assets/Images/Layer_1.png" alt="" srcset="">
+                        <img src="../Assets/Images/Isolation_Mode.png" alt="" srcset="">
+                        <img src="../Assets/Images/Layer_2.png" alt="" srcset="">
+                        <img src="../Assets/Images/real cat pixel 2 1.png" alt="" srcset="">
+                        <img src="../Assets/Images/Payment--5ec7b84501d0360016d49083 1.png" alt="" srcset="">
+                        <img src="../Assets//Images/Shield 1.png" alt="" srcset="">
+                    </div>
                 </div>
-            </div>
-            <div class="illustration">
-                <h2>3D</h2>
-                <div class="content">
-                    <img src="../Assets/Images/port-x wallpaper2 1.png" alt="" srcset="">
-                    <img src="../Assets/Images/Group 12.png" alt="" srcset="">
-                    <img src="../Assets/Images/Astronaut12.png" alt="" srcset="">
-                    <img src="../Assets/Images/Astronaut4 1.png" alt="" srcset="">
-                    <img src="../Assets/Images/Rectangle 1058.png" alt="" srcset="">
-                    <img src="../Assets/Images/Astronaut12.png" alt="" srcset="">
+                <div class="illustration">
+                    <h2 class="red-title">3D</h2>
+                    <div class="content">
+                        <img src="../Assets/Images/port-x wallpaper2 1.png" alt="" srcset="">
+                        <img src="../Assets/Images/Group 12.png" alt="" srcset="">
+                        <img src="../Assets/Images/Astronaut12.png" alt="" srcset="">
+                        <img src="../Assets/Images/Astronaut4 1.png" alt="" srcset="">
+                        <img src="../Assets/Images/Rectangle 1058.png" alt="" srcset="">
+                        <img src="../Assets/Images/Astronaut12.png" alt="" srcset="">
+                    </div>
                 </div>
             </div>
         </section>
@@ -141,12 +147,12 @@
                 <div class="links">
                     <div class="qr-code">
                         <p>Whatsapp</p>
-                        <img src="" alt="">
+                        <img src="../Assets/Images/photo_2023-02-11_11-00-25 1.png" alt="">
                         <p>Scan code or <a href="#">Click link</a></p>
                     </div>
                     <div class="qr-code">
                         <p>Instagram</p>
-                        <img src="" alt="">
+                        <img src="../Assets/Images/photo_2023-02-11_11-24-44 1.png" alt="">
                         <p>Scan code or <a href="#">Click link</a></p>
                     </div>
                 </div>

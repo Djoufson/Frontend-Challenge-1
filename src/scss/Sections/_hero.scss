@@ -1,6 +1,6 @@
 /* Hero section */
 header {
-    height: 100vh;
+    position: relative;
     width: 100vw;
     overflow: hidden;
     nav{
@@ -40,12 +40,38 @@ header {
         }
         
         @include md{
-            justify-content: start;
+            p{
+                display: none;
+            }
+            ul{
+                opacity: 1;
+                background-color: transparent;
+                position: inherit;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 25px;
+                width: auto;
+                top: auto;
+                left: auto;
+                height: auto;
+                li a{
+                    color: $secondary;
+                    &:hover{
+                        color: $secondary-accentuation;
+                    }
+                    
+                    &.active{
+                        color: white;
+                    }
+                }
+            }
         }
     }
 }
 
 #hero {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -54,6 +80,16 @@ header {
         top: 0;
         height: 100vh;
         right: -125%
+    }
+
+    @include md{
+        min-height: auto;
+        &> img{
+            top: 0;
+            height: auto;
+            width: min(60%, 650px);
+            right: 0;
+        }
     }
 }
 .profile-introduction {
@@ -79,6 +115,24 @@ header {
             top: 0;
             left: 20%;
         }
+
+        @include md{
+            height: 35vh;
+            img{
+                width: 6rem;
+                border: 3px solid $red;
+            }
+            &::after{
+                position: absolute;
+                content: 'HI';
+                font-size: 400px;
+                color: white;
+                mix-blend-mode: overlay;
+                font-weight: 600;
+                top: -210px;
+                left: -25px;
+            }
+        }
     }
 
     span{
@@ -101,7 +155,7 @@ header {
     align-items: flex-end;
 
     p{
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 600;
         color: $secondary;
         width: 80px;
@@ -112,14 +166,14 @@ header {
 // The hamburger
 .hamburger{
     cursor: pointer;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
-    padding: 0;
+    background-color: $secondary-accentuation;
     border: none;
+    border-radius: $border-radius-round;
 }
 .hamburger span{
     position: relative;

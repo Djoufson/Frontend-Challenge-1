@@ -1,0 +1,47 @@
+/* Footer */
+
+#contact-me{
+    background-color: $secondary-accentuation;
+    padding-bottom: 50px;
+
+    .container h1{
+        margin: 0;
+    }
+    
+    .links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+
+        .qr-code{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+
+            img{
+                border-radius: $border-radius-10;
+            }
+        }
+    }
+
+    @include md{
+        background-image: url(../../../Assets/Images/link\ 1.png);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-size: 170px auto;
+        .container{
+            display: flex;
+            gap: 50px;
+            .description{
+                width: 40%;
+            }
+    
+            .links{
+                flex-direction: row;
+            }
+        }
+    }
+
+}

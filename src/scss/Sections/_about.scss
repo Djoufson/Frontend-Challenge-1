@@ -1,0 +1,17 @@
+#about-me{
+    @include md{
+        .container{
+            background-image: url(../../../Assets/Images/Crystal\ two.png);
+            background-repeat: no-repeat;
+            background-position: center right;
+            background-size: 200px auto;
+        }
+        .content{
+            max-width: 80%;
+        }
+    }
+    
+    p{
+        margin-bottom: 28px;
+    }
+}
